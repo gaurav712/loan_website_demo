@@ -1,0 +1,94 @@
+.container {
+  top: 0;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.websiteTitle a {
+  text-decoration: none;
+  color: unset;
+  font-size: 3rem;
+  font-weight: 700;
+  transition: all 0.25s;
+  color: #454545;
+}
+
+.websiteTitle a:hover {
+  color: black;
+  font-size: 3.2rem;
+  text-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.navBarList {
+  display: flex;
+  list-style: none;
+}
+
+.navBarList li {
+  margin: 0 1em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  border: 0px solid cyan;
+}
+
+.navBarList li:hover {
+  margin-top: -0.25em;
+  color: teal;
+}
+
+.loginButton {
+  border: none;
+  padding: 0.5em;
+  height: fit-content;
+  min-width: 5em;
+  font-size: 1.5rem;
+  border-radius: 0.5em;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  align-self: center;
+  transition: all 0.25s;
+}
+
+.loginButton:hover {
+  font-size: 1.55rem;
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1100px) {
+  .websiteTitle a {
+    font-size: 2.5rem;
+  }
+  .navBarList li {
+    font-size: 1rem;
+  }
+  .loginButton {
+    font-size: 1rem;
+    padding: 0.5em;
+  }
+  .loginButton:hover {
+    font-size: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .websiteTitle a {
+    font-size: 1.75rem;
+  }
+  .navBarList li {
+    font-size: 0.85rem;
+  }
+  .loginButton {
+    font-size: 0.85rem;
+    padding: 0.4em;
+  }
+}
+
+@media (max-width: 440px) {
+  .navBarList {
+    display: none;
+  }
+}
