@@ -8,12 +8,12 @@ const Header = () => {
       <div className={styles.websiteTitle}>
         <Link to="/">loans</Link>
       </div>
-      <ul className={styles.navBarList}>
+        {/*<ul className={styles.navBarList}>
         <li>Loans</li>
         <li>About</li>
         <li>Contact</li>
       </ul>
-      <button className={styles.loginButton}>Login</button>
+      <button className={styles.loginButton}>Login</button>*/}
     </div>
   );
 };

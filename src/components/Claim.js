@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 import styles from "../stylesheets/Claim.module.css";
 
@@ -6,6 +7,8 @@ import claim from "../assets/claim.jpeg";
 import LoanTypes from "./LoanTypes";
 
 const Claim = () => {
+  const BACKEND_URI = "https://temp-b.herokuapp.com";
+
   const [data, setData] = useState({
     loanType: "",
     name: "",
@@ -18,6 +21,17 @@ const Claim = () => {
   const submitFormData = (e) => {
     e.preventDefault();
     console.log(data);
+
+    axios
+      .post(`${BACKEND_URI}/users/add`, data)
+      .then((res) => {
+        console.log(res);
+        alert("Succeeded!");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Invalid Entry(ies)");
+      });
   };
 
   return (
@@ -40,7 +54,7 @@ const Claim = () => {
             onChange={(e) => setData({ ...data, name: e.target.value })}
           />
           <input
-            type="text"
+            type="number"
             placeholder="Phone Number"
             className={styles.inputField}
             value={data.phone}
